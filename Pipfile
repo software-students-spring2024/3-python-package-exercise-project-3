@@ -7,6 +7,8 @@ name = "pypi"
 pytest = "*"
 build = "*"
 twine = "*"
+pytest-mock = "*"
+argparse = "*"
 
 [dev-packages]
 
