@@ -1,3 +1,15 @@
-# Python Package Exercise
+# Rock Paper Scissors Game
 
-An exercise to create a Python package, build it, test it, distribute it, and use it. See [instructions](./instructions.md) for details.
+A simple, interactive Rock, Paper, Scissors game implemented in Python. This package allows users to play against the computer or simulate a game between two computer-controlled players.
+
+## Installation
+
+You can install the Rock Paper Scissors game using pip:
+```pip install rock-paper-scissors-game```
+
+## Usage
+
+### Play against the computer
+To play against the computer, run: play
+
+

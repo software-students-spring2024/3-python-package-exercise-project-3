@@ -1,4 +1,4 @@
-from song import suggest_song
+from rockpaperscissors.game import suggest_song
 
 def main():
     print(suggest_song(1))
