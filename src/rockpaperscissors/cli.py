@@ -1,36 +1,44 @@
-import argparse
-from game import determine_winner, generate_computer_choice, update_scoreboard, reset_scoreboard
+import random
 
-def play():
-    player_choice = input("Choose rock, paper, or scissors: ").lower()
-    computer_choice = generate_computer_choice()
-    print(f"Computer chose {computer_choice}")
-    result = determine_winner(player_choice, computer_choice)
-    update_scoreboard(result)
+# Global scoreboard
+scoreboard = {'player': 0, 'computer': 0}
 
-def simulate():
-    choice_one = generate_computer_choice()
-    choice_two = generate_computer_choice()
-    print(f"Player One chose {choice_one}")
-    print(f"Player Two chose {choice_two}")
-    result = determine_winner(choice_one, choice_two)
-    update_scoreboard(result)
+def determine_winner(player_choice, computer_choice):
+    global scoreboard
+    if player_choice == computer_choice:
+        result = "It's a tie!"
+    elif player_choice == "rock":
+        if computer_choice == "scissors":
+            scoreboard['player'] += 1
+            result = "You win!"
+        else:
+            scoreboard['computer'] += 1
+            result = "Computer wins!"
+    elif player_choice == "paper":
+        if computer_choice == "rock":
+            scoreboard['player'] += 1
+            result = "You win!"
+        else:
+            scoreboard['computer'] += 1
+            result = "Computer wins!"
+    elif player_choice == "scissors":
+        if computer_choice == "paper":
+            scoreboard['player'] += 1
+            result = "You win!"
+        else:
+            scoreboard['computer'] += 1
+            result = "Computer wins!"
+    return result
 
-def main():
-    parser = argparse.ArgumentParser(description="Play Rock, Paper, Scissors")
-    subparsers = parser.add_subparsers(dest="command")
-    
-    parser_play = subparsers.add_parser('play', help='Play against the computer')
-    parser_play.set_defaults(func=play)
+def generate_computer_choice():
+    choices = ["rock", "paper", "scissors"]
+    return random.choice(choices)
 
-    parser_simulate = subparsers.add_parser('simulate', help='Simulate a game between two players')
-    parser_simulate.set_defaults(func=simulate)
+def update_scoreboard(result):
+    print(result)
+    print(f"Scoreboard: Player {scoreboard['player']}, Computer {scoreboard['computer']}")
 
-    parser_reset = subparsers.add_parser('reset', help='Reset the scoreboard')
-    parser_reset.set_defaults(func=reset_scoreboard)
-
-    args = parser.parse_args()
-    if hasattr(args, 'func'):
-        args.func()
-    else:
-        parser.print_help()
+def reset_scoreboard():
+    global scoreboard
+    scoreboard = {'player': 0, 'computer': 0}
+    print("Scoreboard has been reset.")
