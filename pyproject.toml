@@ -3,9 +3,9 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "rock_paper_scissors_game"
+name = "rockpaperscissors2333"
 description = "A simple Rock, Paper, Scissors game."
-version = "0.0.3"
+version = "0.0.4"
 authors = [
   { name="Zijie Zhao", email="zz3589@nyu.edu" },
 ]
@@ -29,4 +29,4 @@ dev = ["pytest"]
 "Bug Tracker" = "https://github.com/software-students-spring2024/pysong/issues"
 
 [project.scripts]
-rock_paper_scissors_game = "rock_paper_scissors_game.__main__:main"
+rockpaperscissors2333 = "rockpaperscissors2333.__main__:main"

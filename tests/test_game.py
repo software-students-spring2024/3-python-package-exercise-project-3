@@ -1,5 +1,5 @@
 import pytest
-from src.rockpaperscissors.game import determine_winner, generate_computer_choice
+from src.rockpaperscissors2333.game import determine_winner, generate_computer_choice
 
 def test_determine_winner():
     assert determine_winner("rock", "rock") == "It's a tie!"

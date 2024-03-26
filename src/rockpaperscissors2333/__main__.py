@@ -1,4 +1,4 @@
-from rock_paper_scissors_game.cli import play, simulate
+from rockpaperscissors2333.cli import play, simulate
 def main():
     play()
     print("Now simulating a game between two players...")
