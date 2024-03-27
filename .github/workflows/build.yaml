@@ -1,5 +1,5 @@
 name: CI / CD
-on: [push, pull_request]
+on: [pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -45,11 +45,6 @@ jobs:
         run: |
           pipenv install build
           pipenv run python -m build .
-        - name: Extract package version
-        id: extract_version
-        run: |
-          VERSION=$(grep -Po '(?<=version = ")[^"]*' pyproject.toml | awk '{print $1}')
-          echo "::set-output name=version::$VERSION"
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
