@@ -80,6 +80,7 @@ def test_stats_no_games(capsys):
     assert "You haven't played any games yet!" in captured.out
 
 def test_stats_with_games(mocker, capsys):
+    mocker.patch('src.rockpaperscissors2333.cli.total_games', return_value=10)
     mocker.patch('src.rockpaperscissors2333.cli.player_choices', return_value=['rock', 'paper', 'rock', 'scissors'])
     
     stats()
