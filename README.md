@@ -14,32 +14,9 @@ You can install the Rock Paper Scissors game using pip:
 To use our game, simply import the package and select a number option from the list that appears!
 
 
-### Code Snippet
-```python
-from rockpaperscissors2333.cli import play, simulate, tutorial
-from rockpaperscissors2333.game import reset_scoreboard
+### Code Examples
+[example](https://github.com/ZijieZha0/code-exampl)
 
-while True:
-    print("Welcome to Rock, Paper, Scissors!")
-    print("1. Play against the computer")
-    print("2. Simulate a game between two players")
-    print("3. Reset the scoreboard")
-    print("4. View tutorial")
-    print("5. Quit")
-    choice = input("Enter the number of your choice: ")
-    if choice == "1":
-        play()
-    elif choice == "2":
-        simulate()
-    elif choice == "3":
-        reset_scoreboard()
-    elif choice == "4":
-        tutorial()
-    elif choice == "5":
-        break
-    else:
-        print("Invalid choice. Please try again.")    
-```
 
 ## Documentation
 
@@ -66,8 +43,24 @@ In "game.py":
 
     "reset_scoreboard()" clears the scoreboard.
 
+For the contribution:
+
+    You can setup the virtual environment by starting with ```pipenv install```
+
+    And then install all the dependences through ```pipenv install```
+
+    Then you could active the virtual environment through ```pipenv shell```
+
+    Then you can build and test the packages inside the virtual environment.
+
+
+
 
 ## Teammates
 
 Zijie Zhao ([github](https://github.com/ZijieZha0)), Nathan Daniel ([github](https://github.com/WayyGood)), Ellis Pinsky ([github](https://github.com/ellispinsky)), Kevin Li ([github](https://github.com/Kevinli712390))
 
+
+## PyPI page
+
+[rockpaperscissors2333](https://pypi.org/project/rockpaperscissors2333/)
