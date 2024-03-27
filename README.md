@@ -5,7 +5,7 @@ A simple, interactive Rock, Paper, Scissors game implemented in Python. This pac
 ## Installation
 
 You can install the Rock Paper Scissors game using pip:
-```pip install rock-paper-scissors-game```
+```pip install rockpaperscissors2333```
 
 ## Usage
 
