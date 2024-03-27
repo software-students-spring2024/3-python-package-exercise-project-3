@@ -2,7 +2,7 @@
 
 import pytest
 from unittest.mock import patch
-from src.rockpaperscissors2333.cli import play, simulate, stats
+from src.rockpaperscissors2333.cli import play, simulate
 
 def test_play_scissors_vs_rock(mocker, capsys):
     mocker_input = mocker.patch('builtins.input', return_value='scissors')
@@ -79,14 +79,3 @@ def test_stats_no_games(capsys):
     captured = capsys.readouterr()
     assert "You haven't played any games yet!" in captured.out
 
-def test_stats_with_games(mocker, capsys):
-    mocker.patch('src.rockpaperscissors2333.cli.total_games', return_value=10)
-    mocker.patch('src.rockpaperscissors2333.cli.player_choices', return_value=['rock', 'paper', 'rock', 'scissors'])
-    
-    stats()
-    
-    captured = capsys.readouterr()
-    assert "Your statistics:" in captured.out
-    assert "Rock: 2 times" in captured.out
-    assert "Paper: 1 times" in captured.out
-    assert "Scissors: 1 times" in captured.out

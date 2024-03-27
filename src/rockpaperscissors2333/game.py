@@ -2,8 +2,6 @@ import random
 
 # Global scoreboard
 scoreboard = {'player': 0, 'computer': 0}
-player_choices = []
-total_games = 0
 
 def determine_winner(player_choice, computer_choice):
     global scoreboard
@@ -45,8 +43,3 @@ def reset_scoreboard():
     scoreboard = {'player': 0, 'computer': 0}
     print("Scoreboard has been reset.")
 
-def update_history(player_choice):
-    global player_choices
-    global total_games
-    player_choices.append(player_choice)
-    total_games = len(player_choices)
