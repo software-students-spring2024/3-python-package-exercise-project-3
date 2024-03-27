@@ -19,4 +19,4 @@ rockpaperscissors2333 = {version = "==0.0.4", index = "testpypi"}
 [dev-packages]
 
 [requires]
-python_version = "3.9"
+python_version = "3"
