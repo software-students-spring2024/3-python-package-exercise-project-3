@@ -1,5 +1,6 @@
 import pytest
-from src.rockpaperscissors2333.game import determine_winner, generate_computer_choice, update_scoreboard, reset_scoreboard
+from src.rockpaperscissors2333.game import determine_winner, generate_computer_choice, update_scoreboard, reset_scoreboard, update_history
+
 
 class MockScoreboard:
     def __init__(self):
@@ -62,3 +63,11 @@ def test_reset_scoreboard(mock_scoreboard):
     mock_scoreboard.scoreboard['computer'] = 2
     mock_scoreboard.reset_scoreboard()
     assert mock_scoreboard.scoreboard['player'] == 0
+
+def test_update_history():
+    game_module = sys.modules['src.rockpaperscissors2333.game']
+    game_module.player_choices.clear()
+    game_module.update_history("rock")
+    assert game_module.player_choices == ["rock"]
+    # Assert that total_games is updated
+    assert game_module.total_games == 1
