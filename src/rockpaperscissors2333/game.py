@@ -42,3 +42,4 @@ def reset_scoreboard():
     global scoreboard
     scoreboard = {'player': 0, 'computer': 0}
     print("Scoreboard has been reset.")
+

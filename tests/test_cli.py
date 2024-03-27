@@ -73,3 +73,8 @@ def test_simulate_rock_rock_then_rock_rock(mocker, capsys):
     assert "You chose rock" in captured.out
     assert "Computer chose rock" in captured.out
     assert "It's a tie!" in captured.out
+
+
+
+
+

@@ -16,6 +16,13 @@ def simulate():
     result = determine_winner(choice_one, choice_two)
     update_scoreboard(result)
 
+def tutorial():
+    print("Welcome to Rock, Paper, Scissors!\n")
+    print("Rules:")
+    print("Rock beats Scissors, Paper beats Rock, Scissors beats Paper! Simple enough!")
+    print("Input a number option from the menu to start! Have fun!")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Play Rock, Paper, Scissors")
     subparsers = parser.add_subparsers(dest="command")
@@ -28,6 +35,9 @@ def main():
 
     parser_reset = subparsers.add_parser('reset', help='Reset the scoreboard')
     parser_reset.set_defaults(func=reset_scoreboard)
+
+    parser_tutorial = subparsers.add_parser('tutorial', help='View tutorial')
+    parser_tutorial.set_defaults(func=tutorial)
 
     args = parser.parse_args()
     if hasattr(args, 'func'):

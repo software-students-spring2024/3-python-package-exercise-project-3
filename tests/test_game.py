@@ -1,6 +1,7 @@
 import pytest
 from src.rockpaperscissors2333.game import determine_winner, generate_computer_choice, update_scoreboard, reset_scoreboard
 
+
 class MockScoreboard:
     def __init__(self):
         self.scoreboard = {'player': 0, 'computer': 0}
@@ -62,3 +63,4 @@ def test_reset_scoreboard(mock_scoreboard):
     mock_scoreboard.scoreboard['computer'] = 2
     mock_scoreboard.reset_scoreboard()
     assert mock_scoreboard.scoreboard['player'] == 0
+
