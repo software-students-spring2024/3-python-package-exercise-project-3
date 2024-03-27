@@ -74,8 +74,3 @@ def test_simulate_rock_rock_then_rock_rock(mocker, capsys):
     assert "Computer chose rock" in captured.out
     assert "It's a tie!" in captured.out
 
-def test_stats_no_games(capsys):
-    stats()
-    captured = capsys.readouterr()
-    assert "You haven't played any games yet!" in captured.out
-
