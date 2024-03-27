@@ -1,4 +1,5 @@
 import pytest
+import sys
 from src.rockpaperscissors2333.game import determine_winner, generate_computer_choice, update_scoreboard, reset_scoreboard, update_history
 
 
