@@ -14,7 +14,7 @@ You can install the Rock Paper Scissors game using pip:
 To use our game, simply import the package and select a number option from the list that appears!
 
 
-### Code Examples
+## Code Examples
 [example](https://github.com/ZijieZha0/code-exampl)
 
 
@@ -43,15 +43,15 @@ In "game.py":
 
     "reset_scoreboard()" clears the scoreboard.
 
-For the contribution:
+## For the contribution:
 
-    You can setup the virtual environment by starting with ```pipenv install```
+You can setup the virtual environment by starting with ```pipenv install```
 
-    And then install all the dependences through ```pipenv install```
+ And then install all the dependences through ```pipenv install```
 
-    Then you could active the virtual environment through ```pipenv shell```
+Then you could active the virtual environment through ```pipenv shell```
 
-    Then you can build and test the packages inside the virtual environment.
+Then you can build and test the packages inside the virtual environment.
 
 
 
