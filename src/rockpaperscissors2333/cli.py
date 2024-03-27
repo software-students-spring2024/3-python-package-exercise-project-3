@@ -1,6 +1,5 @@
 import argparse
 from .game import determine_winner, generate_computer_choice, update_scoreboard, reset_scoreboard
-from .game import total_games, player_choices 
 from collections import Counter
 
 def play():
