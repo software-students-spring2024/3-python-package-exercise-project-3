@@ -45,6 +45,15 @@ jobs:
         run: |
           pipenv install build
           pipenv run python -m build .
+      - name: Check PyPI for existing version
+        run: |
+          VERSION=$(python -c "import toml; print(toml.load('pyproject.toml')['tool']['poetry']['version'])")
+          if twine check $VERSION --repository-url https://test.pypi.org/legacy/; then
+            echo "Version $VERSION already exists on test PyPI. Exiting."
+            exit 1
+          else
+            echo "Version $VERSION does not exist on test PyPI. Proceeding with build and publish."
+          fi
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
