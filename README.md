@@ -10,7 +10,9 @@ You can install the package using pip:
 ```pip install rockpaperscissors2333```
 
 Then import the file from the package by using:
+
 ```from rockpaperscissors2333.cli import play, simulate, tutorial```
+
 ```from rockpaperscissors2333.game import reset_scoreboard```
 
 And then you could use these function to play rock paper scissors with computer or just simulate a play.
