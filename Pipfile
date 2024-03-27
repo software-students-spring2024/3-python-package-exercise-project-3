@@ -14,7 +14,7 @@ build = "*"
 twine = "*"
 pytest-mock = "*"
 argparse = "*"
-rockpaperscissors2333 = {version = "==0.0.4", index = "testpypi"}
+rockpaperscissors2333 = {version = "==1.0.1", index = "testpypi"}
 
 [dev-packages]
 

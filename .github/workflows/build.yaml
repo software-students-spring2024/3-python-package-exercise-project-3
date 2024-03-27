@@ -1,5 +1,5 @@
 name: CI / CD
-on: [push, pull_request]
+on: [pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -38,6 +38,9 @@ jobs:
           pip install --user pipenv
           pipenv install pytest
           pipenv install
+      - name: Test with pytest
+        run: |
+          pipenv run python -m pytest
       - name: Build package
         run: |
           pipenv install build
