@@ -1,5 +1,5 @@
 import argparse
-from game import determine_winner , generate_computer_choice
+from src.rockpaperscissors.game import determine_winner , generate_computer_choice
 
 def play():
     player_choice = input("Choose rock , paper , or scissors:").lower()
