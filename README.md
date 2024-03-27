@@ -1,3 +1,4 @@
+[![CI / CD](https://github.com/software-students-spring2024/pysong/actions/workflows/build.yaml/badge.svg)](https://github.com/software-students-spring2024/pysong/actions/workflows/build.yaml)
 # Rock Paper Scissors Game
 
 A simple, interactive Rock, Paper, Scissors game implemented in Python. This package allows users to play against the computer or simulate a game between two computer-controlled players.

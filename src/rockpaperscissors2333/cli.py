@@ -11,8 +11,8 @@ def play():
 def simulate():
     choice_one = generate_computer_choice()
     choice_two = generate_computer_choice()
-    print(f"Player One chose {choice_one}")
-    print(f"Player Two chose {choice_two}")
+    print(f"You chose {choice_one}")
+    print(f"Computer chose {choice_two}")
     result = determine_winner(choice_one, choice_two)
     update_scoreboard(result)
 

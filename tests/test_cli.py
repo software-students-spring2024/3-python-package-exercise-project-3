@@ -50,8 +50,8 @@ def test_simulate_scissors_rock_then_rock_paper(mocker, capsys):
     simulate()
     
     captured = capsys.readouterr()
-    assert "Player One chose scissors" in captured.out
-    assert "Player Two chose rock" in captured.out
+    assert "You chose scissors" in captured.out
+    assert "Computer chose rock" in captured.out
     assert "Computer wins!" in captured.out
 
 def test_simulate_paper_scissors_then_rock_rock(mocker, capsys):
@@ -60,8 +60,8 @@ def test_simulate_paper_scissors_then_rock_rock(mocker, capsys):
     simulate()
     
     captured = capsys.readouterr()
-    assert "Player One chose paper" in captured.out
-    assert "Player Two chose scissors" in captured.out
+    assert "You chose paper" in captured.out
+    assert "Computer chose scissors" in captured.out
     assert "Computer wins!" in captured.out
 
 def test_simulate_rock_rock_then_rock_rock(mocker, capsys):
@@ -70,6 +70,6 @@ def test_simulate_rock_rock_then_rock_rock(mocker, capsys):
     simulate()
     
     captured = capsys.readouterr()
-    assert "Player One chose rock" in captured.out
-    assert "Player Two chose rock" in captured.out
+    assert "You chose rock" in captured.out
+    assert "Computer chose rock" in captured.out
     assert "It's a tie!" in captured.out
